@@ -1,3 +1,4 @@
+  
 
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot import *
@@ -56,11 +57,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("Gbanning This Dump")
+        repondeur = await lol.reply("Gbanning This Dump")
     else:
-        friday = await lol.edit("Wait Processing.....")
+        repondeur = await lol.edit("Wait Processing.....")
     me = await userbot.client.get_me()
-    await friday.edit(f"Global Ban Is Coming ! Wait And Watch You Dump Idiot")
+    await repondeur.edit(f"Global Ban Is Coming ! Wait And Watch You Dump Idiot")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -78,10 +79,10 @@ async def gspider(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await friday.edit(f"**Something W3NT Wrong 🤔**")
+        return await repondeur.edit(f"**Something W3NT Wrong 🤔**")
     if user:
         if user.id == 1871002086:
-            return await friday.edit(
+            return await repondeur.edit(
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator😑😑🖕**"
             )
         try:
@@ -101,17 +102,17 @@ async def gspider(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
+                await repondeur.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
             except:
                 b += 1
     else:
-        await friday.edit(f"**Reply to a user !!**")
+        await repondeur.edit(f"**Reply to a user !!**")
     try:
         if gmute(user.id) is False:
-            return await friday.edit(f"**Error! User probably already gbanned.**")
+            return await repondeur.edit(f"**Error! User probably already gbanned.**")
     except:
         pass
-    return await friday.edit(
+    return await repondeur.edit(
         f"**Gbanned [{user.first_name}](tg://user?id={user.id}) Affected Chats : {a} **"
     )
 
@@ -122,11 +123,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("`Wait Let Me Process`")
+        repondeur = await lol.reply("`Wait Let Me Process`")
     else:
-        friday = await lol.edit("Just a Second ")
+        repondeur = await lol.edit("Just a Second ")
     me = await userbot.client.get_me()
-    await friday.edit(f"Trying To Ungban User !")
+    await repondeur.edit(f"Trying To Ungban User !")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -144,10 +145,10 @@ async def gspider(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await friday.edit("Someting Went Wrong 🤔")
+        return await repondeur.edit("Someting Went Wrong 🤔")
     if user:
         if user.id == 1871002086:
-            return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
+            return await repondeur.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
         except:
@@ -165,17 +166,17 @@ async def gspider(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
+                await repondeur.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
             except:
                 b += 1
     else:
-        await friday.edit("**Reply to a user !!**")
+        await repondeur.edit("**Reply to a user !!**")
     try:
         if ungmute(user.id) is False:
-            return await friday.edit("**Error! User probably already ungbanned.**")
+            return await repondeur.edit("**Error! User probably already ungbanned.**")
     except:
         pass
-    return await friday.edit(
+    return await repondeur.edit(
         f"**UNGBANNED // USER - [{user.first_name}](tg://user?id={user.id}) CHATS : {a} **"
     )
 
