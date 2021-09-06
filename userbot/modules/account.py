@@ -4,7 +4,7 @@ from userbot.utils import *
 from userbot.events import *
 
 @register(outgoing=True, pattern=r"^\.deletemyaccount")
-async delete (event):
+async def _(event):
   if event.fwd_from:
         return
   async with client.conversation(chat) as conv:
