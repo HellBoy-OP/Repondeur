@@ -13,7 +13,7 @@ danger = [
   "bash",
   "session.save",
   "Session.save",
-  "delete_account,
+  "delete_account",
   "functions.account.DeleteAccountRequest",
   "DeleteAccountRequest",
   "deleterccountrequest"
