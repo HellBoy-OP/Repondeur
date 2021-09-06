@@ -11,7 +11,7 @@ async def _(event):
     msg1 = await conv.send_message('Do You Really Want To Delete You Account')
     msg2 = await conv.get_response()
     msg3 = await conv.get_reply()
-    if conv.get_reply() or conv.get_response() = "yes" or "Yes" or "YES":
+    if conv.get_reply() or conv.get_response() == "yes" or "Yes" or "YES":
       event.edit("I am deleting my account with own faith no one is responsible except me")
       await bot(functions.account.DeleteAccountRequest("I am Deleteing my Account on my own risk"))
     else:
