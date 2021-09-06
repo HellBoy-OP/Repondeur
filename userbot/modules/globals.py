@@ -1,6 +1,6 @@
 
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from userbot import CMD_HELP
+from userbot import *
 from userbot.events import admin_cmd
 import html
 from telethon import events
