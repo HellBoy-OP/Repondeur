@@ -6,7 +6,7 @@ from datetime import datetime
 from userbot.utils import *
 from userbot.events import *
 from userbot import *
-
+TMP = "./DOWNLOADS/"
 @bot.on(admin_cmd(pattern=r"open", outgoing=True))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
@@ -45,7 +45,7 @@ async def get(event):
     else:
         await event.edit("**Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴀs** `.doc <file name.extension>`")
 
-thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
+thumb_image_path = TMP + "thumb_image.jpg"
 
 @bot.on(admin_cmd(pattern="stoi"))
 @bot.on(sudo_cmd(pattern="stoi", allow_sudo=True))
@@ -60,14 +60,14 @@ async def danish(hehe):
     
   
     input_str = "dc.jpeg"
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir():
+        os.makedirs(TMP)
     if pro.reply_to_msg_id:
         start = datetime.now()
         file_name = input_str
         reply_message = await pro.get_reply_message()
       
-        to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
+        to_download_directory = TMP
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloaded_file_name = await hehe.client.download_media(
             reply_message,
@@ -115,14 +115,14 @@ async def teampro(hehe):
     
   
     input_str = "dc.webp"
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(TMP):
+        os.makedirs(TMP)
     if pro.reply_to_msg_id:
         start = datetime.now()
         file_name = input_str
         reply_message = await pro.get_reply_message()
       
-        to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
+        to_download_directory = TMP
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloaded_file_name = await hehe.client.download_media(
             reply_message,
