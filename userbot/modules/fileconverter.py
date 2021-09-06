@@ -48,7 +48,6 @@ async def get(event):
 thumb_image_path = TMP + "thumb_image.jpg"
 
 @bot.on(admin_cmd(pattern="stoi"))
-@bot.on(sudo_cmd(pattern="stoi", allow_sudo=True))
 async def danish(hehe):
     if hehe.fwd_from:
         return
@@ -103,7 +102,6 @@ async def danish(hehe):
   #hehe
   
 @bot.on(admin_cmd(pattern="itos"))
-@bot.on(sudo_cmd(pattern="itos", allow_sudo=True))
 async def teampro(hehe):
     if hehe.fwd_from:
         return
